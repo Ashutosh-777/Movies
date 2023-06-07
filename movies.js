@@ -7,13 +7,13 @@ async function fetchMovies() {
     const data = await response.json();
     const movies = data.results; 
     
-
+  
     movies.forEach((movie) => {
       const card = document.createElement("div");
       card.classList.add("card");
       
       const poster = document.createElement("img");
-      poster.src ='http://image.tmdb.org/t/p/w500'+ movie.backdrop_path;  
+      poster.src ='http://image.tmdb.org/t/p/w500'+ movie.backdrop_path; 
       poster.alt = movie.title||movie.name;
       poster.vote=movie.vote_average; 
       poster.classList.add("poster");
